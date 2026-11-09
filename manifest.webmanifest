@@ -1,0 +1,22 @@
+{
+  "name": "KotPlan · planning de blocus",
+  "short_name": "KotPlan",
+  "description": "Ton planning de blocus se fait tout seul et se recalcule quand tu sautes une séance. Pomodoro, suivi, stats.",
+  "lang": "fr-BE",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbfcfe",
+  "theme_color": "#1b3a8c",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Lancer un focus", "url": "./#/focus", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Planning", "url": "./#/planning", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
