@@ -1,5 +1,5 @@
 // Service worker : l'app fonctionne hors-ligne (cache d'abord, réseau en secours).
-const VERSION = "kotplan-1bc4762f60";
+const VERSION = "kotplan-63db51203e";
 const SHELL = ["./", "app.css", "app.js", "fonts/bricolage-latin.woff2", "icons/apple-touch-icon.png", "icons/favicon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "index.html", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
