@@ -1,5 +1,6 @@
 // Service worker : l'app fonctionne hors-ligne (cache d'abord, réseau en secours).
-const VERSION = "kotplan-c14dc154a4";
+// Le site héberge plusieurs apps : on ne supprime que nos propres caches (préfixe « kotplan- »).
+const VERSION = "kotplan-025c99e992";
 const SHELL = ["./", "app.css", "app.js", "fonts/bricolage-latin.woff2", "icons/apple-touch-icon.png", "icons/favicon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "index.html", "manifest.webmanifest"];
 
 self.addEventListener("install", (e) => {
@@ -11,7 +12,7 @@ self.addEventListener("install", (e) => {
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k)))).then(() => self.clients.claim())
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => k.startsWith("kotplan-") && k !== VERSION).map((k) => caches.delete(k)))).then(() => self.clients.claim())
   );
 });
 
